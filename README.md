@@ -96,7 +96,7 @@ to make the file executable on it's own.
 
 ## Demo
 
-![node-red-demo](./images/nodered-demo.png)
+![node-red-demo](./images/node-red-demo.png)
 
 Below is a sample node red flow that can be used to test the output from the VSCP demo server.  You need to set up credentials for the MQTT connections to
 
