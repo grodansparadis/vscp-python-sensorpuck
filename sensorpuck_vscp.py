@@ -147,7 +147,7 @@ class ScanPrint(btle.DefaultDelegate):
             # rssi
             rssi = int(dev.rssi)
             print('\t' + "RSSI: %d dBm" % rssi )
-            ex.head = vscp.VSCP_PRIORITY_NORMAL | vscp.VSCP_HEADER16_DUMB
+            ex.head = VSCP_PRIORITY_NORMAL | VSCP_HEADER16_DUMB
             ex.obid = 0
             ex.timestamp = 0
             guid_array = (guid_orig+':00:08').split(':')
