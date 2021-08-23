@@ -147,6 +147,7 @@ class ScanPrint(btle.DefaultDelegate):
             # rssi
             rssi = int(dev.rssi)
             print('\t' + "RSSI: %d dBm" % rssi )
+            ex.head = vscp.VSCP_PRIORITY_NORMAL | vscp.VSCP_HEADER16_DUMB
             ex.obid = 0
             ex.timestamp = 0
             guid_array = (guid_orig+':00:08').split(':')
@@ -179,6 +180,7 @@ class ScanPrint(btle.DefaultDelegate):
             humidity = float(int(high,16)*256 + int(low,16))
             humidity = humidity/10
             print('\t' + 'Relative humidity: ' + str(humidity) +'%')
+            ex.head = vscp.VSCP_PRIORITY_NORMAL | vscp.VSCP_HEADER16_DUMB
             ex.obid = 0
             ex.timestamp = 0
             guid_array = (guid_orig+':00:02').split(':')
@@ -212,6 +214,7 @@ class ScanPrint(btle.DefaultDelegate):
             temp = float(int(high,16)*256 + int(low,16))
             temp = temp/10
             print('\t' + 'Temperature: ' + str(temp) +'C')
+            ex.head = vscp.VSCP_PRIORITY_NORMAL | vscp.VSCP_HEADER16_DUMB
             ex.obid = 0
             ex.timestamp = 0
             guid_array = (guid_orig+':00:01').split(':')
@@ -244,6 +247,7 @@ class ScanPrint(btle.DefaultDelegate):
             lux = int(high,16)*256 + int(low,16)
             lux = lux*2
             print('\t' + 'Ambient light: ' + str(lux) +'lux')
+            ex.head = vscp.VSCP_PRIORITY_NORMAL | vscp.VSCP_HEADER16_DUMB
             ex.obid = 0
             ex.timestamp = 0
             guid_array = (guid_orig+':00:03').split(':')
@@ -275,6 +279,7 @@ class ScanPrint(btle.DefaultDelegate):
             low = val[24:26]
             uv = int(low,16)
             print('\tUV index: ' + str(uv) )
+            ex.head = vscp.VSCP_PRIORITY_NORMAL | vscp.VSCP_HEADER16_DUMB
             ex.obid = 0
             ex.timestamp = 0
             guid_array = (guid_orig+':00:04').split(':')
@@ -301,6 +306,7 @@ class ScanPrint(btle.DefaultDelegate):
             low = val[26:28]
             voltage = float(int(low,16)) / 10
             print('\t' + 'Battery voltage: ' + str(voltage) +'V')
+            ex.head = vscp.VSCP_PRIORITY_NORMAL | vscp.VSCP_HEADER16_DUMB
             ex.obid = 0
             ex.timestamp = 0
             guid_array = (guid_orig+':00:05').split(':')
