@@ -1,4 +1,4 @@
-#!/usr/bin/env pythonA
+#!/usr/bin/env python3
 
 # sensorpuck_vscp.py
 #
