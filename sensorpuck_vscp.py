@@ -141,7 +141,7 @@ class ScanPrint(btle.DefaultDelegate):
             print("\tDetected %s" % ANSI_GREEN + "SENSORPUCK" + ANSI_OFF )
 
             # GUID based on Bluetooth MAC
-            guid_orig = "FF:FF:FF:FF:FF:FF:FF:F7:" + dev.addr.upper()
+            guid_orig = "FF:FF:FF:FF:FF:FF:FF:F8:" + dev.addr.upper()
             print('\t' + "GUID: %s" % guid_orig + ":00:00" )
 
             # rssi
